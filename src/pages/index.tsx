@@ -37,32 +37,39 @@ export default function Home() {
         />
       </Head>
       <main className={classes.main}>
-        <section
-          className={`${classes.left} ${
-            isAnimated && classes.animationSlideFromLeft
-          }`}
-        >
-          <h1 className={classes.heading}>
-            <em>
-              Hi, welcome! My name is{" "}
-              <span className={classes.headingSpan}>
-                Hubert<span className={classes.headingSpanAfter}>Hubert</span>
-              </span>
-              , and I might be what you are looking for.
-            </em>
-          </h1>
+        <div className={classes.mainWrapper}>
+          <section
+            className={`${classes.left} ${
+              isAnimated && classes.animationSlideFromLeft
+            }`}
+          >
+            <h1 className={classes.heading}>
+              <em>
+                Hi, welcome! My name is{" "}
+                <span className={classes.headingSpan}>
+                  Hubert<span className={classes.headingSpanAfter}>Hubert</span>
+                </span>
+                , and I might be what you are looking for.
+              </em>
+            </h1>
+          </section>
+          <div className={classes.imgWrapper}>
+            <Image
+              src="/images/me.jpg"
+              width={100}
+              height={100}
+              layout="responsive"
+              alt="me, the dev"
+              className={`${classes.img} ${
+                isAnimated && classes.animationSlideFromLeft
+              }`}
+            />
+          </div>
+        </div>
+        <section>
+          <TechStackList animation={isAnimated} />
         </section>
-        <Image
-          src="/images/me.jpg"
-          width={800}
-          height={800}
-          alt="me, the dev"
-          className={classes.img}
-        />
       </main>
-      <section>
-        <TechStackList animation={isAnimated} />
-      </section>
     </>
   );
 }

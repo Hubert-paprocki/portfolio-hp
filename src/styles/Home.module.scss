@@ -1,24 +1,33 @@
 @import "./config.module";
 
 .main {
-  display: flex;
   background-color: $backgroundDark;
 
+  &Wrapper {
+    display: flex;
+  }
   .img {
-    @media (min-width: 1200px) {
-      clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 0 50%);
+    &Wrapper {
+      width: 40%;
     }
-    object-fit: cover;
+    opacity: 0;
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 0 50%);
+    @media (min-width: 1200px) {
+      transform: translateX(125%);
+      transition: 0.25s;
+      max-height: 900px;
+      object-fit: cover;
+    }
   }
 
   .left {
-    height: 100%;
     padding-left: 8%;
     padding-top: 10%;
     padding-right: 1rem;
     transition: 1s;
     transform: translateX(125%);
     opacity: 0;
+    width: 60%;
   }
   .animationSlideFromLeft {
     transform: translateX(0);
@@ -26,6 +35,21 @@
   }
   .heading {
     font-size: 4.5rem;
+    @media (max-width: 1600px) {
+      font-size: 3.5rem;
+    }
+    @media (max-width: 1200px) {
+      font-size: 3rem;
+    }
+    @media (max-width: 1000px) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: 880px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
     color: $lightText;
     font-weight: 500;
     text-shadow: 3px 3px 1.5px #aa55ff;
@@ -38,8 +62,8 @@
         text-shadow: none;
         position: absolute;
         background: linear-gradient(to top right, $violet 36%, #cf194f 76%);
-        background-clip: text;
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         bottom: 0px;
         right: 0px;
