@@ -1,0 +1,67 @@
+@import "../../styles/config.module";
+
+.header {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  padding: 1rem 5% 1rem 10%;
+  height: 5rem;
+  background-color: $backgroundLight;
+  background: linear-gradient(to top right, $backgroundLight 36%, $backgroundDark 90%);
+}
+
+.navigation {
+  display: flex;
+  width: 100%;
+}
+.navigationlist {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1.5rem;
+
+  li {
+    list-style: none;
+    display: flex;
+    color: $lightText;
+
+    &:first-of-type {
+      color: $violet;
+      flex-grow: 1;
+    }
+  }
+}
+
+.border {
+  margin-top: 2px;
+  width: 0;
+  height: 2px;
+  background-color: $violet;
+  transition: width 0.3s;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  align-items: flex-end;
+}
+
+.logo {
+  align-items: flex-start;
+}
+
+.wrapper:hover {
+  .border {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .navigation a {
+    font-size: 1.5rem;
+  }
+}
