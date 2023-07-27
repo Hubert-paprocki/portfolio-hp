@@ -23,15 +23,17 @@ function TechStackTile(props: TechStackTileProps): JSX.Element {
   }, [animation, delay]);
 
   return (
-    <li
-      className={`${classes.tile} ${
-        isVisible && classes.animationSlideFromBottom
-      }`}
-    >
-      <figure className={classes.icon}>
-        <Icon />
+    <li>
+      <figure
+        className={`${classes.tile} ${
+          isVisible && classes.animationSlideFromBottom
+        }`}
+      >
+        <div className={classes.icon}>
+          <Icon />
+        </div>
+        <figcaption className={classes.text}>{text}</figcaption>
       </figure>
-      <figcaption className={classes.text}>{text}</figcaption>
     </li>
   );
 }

@@ -23,9 +23,7 @@ function MainHeader() {
             return (
               <li key={link}>
                 <div
-                  className={`${classes.wrapper} ${
-                    link === "/" ? classes.logo : ""
-                  }`}
+                  className={`${link === "/" ? classes.logo : classes.wrapper}`}
                 >
                   <Link href={link}>{name}</Link>
                   <div className={classes.border}></div>

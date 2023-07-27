@@ -8,6 +8,9 @@
   gap: 3rem;
   position: relative;
   transition: 1.5s;
+  li {
+    list-style: none;
+  }
 }
 
 .tile {
@@ -26,7 +29,7 @@
     }
     .text {
       color: $lightText;
-      text-shadow: 1px 1px #aa55ff;
+      text-shadow: $textShadowSmall;
     }
   }
 

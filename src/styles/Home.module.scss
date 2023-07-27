@@ -1,0 +1,49 @@
+@import "./config.module";
+
+.main {
+  display: flex;
+  background-color: $backgroundDark;
+
+  .img {
+    @media (min-width: 1200px) {
+      clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 0 50%);
+    }
+    object-fit: cover;
+  }
+
+  .left {
+    height: 100%;
+    padding-left: 8%;
+    padding-top: 10%;
+    padding-right: 1rem;
+    transition: 1s;
+    transform: translateX(125%);
+    opacity: 0;
+  }
+  .animationSlideFromLeft {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .heading {
+    font-size: 4.5rem;
+    color: $lightText;
+    font-weight: 500;
+    text-shadow: 3px 3px 1.5px #aa55ff;
+
+    &Span {
+      text-shadow: 3px 3px 1.5px $lightText;
+      position: relative;
+      color: transparent;
+      &After {
+        text-shadow: none;
+        position: absolute;
+        background: linear-gradient(to top right, $violet 36%, #cf194f 76%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        bottom: 0px;
+        right: 0px;
+      }
+    }
+  }
+}
