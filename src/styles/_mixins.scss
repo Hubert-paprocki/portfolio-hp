@@ -1,4 +1,4 @@
-@import "./config.module";
+@import "./config";
 @mixin text($textColor, $shadowColor, $textShadow) {
   color: $textColor;
   font-weight: 500;

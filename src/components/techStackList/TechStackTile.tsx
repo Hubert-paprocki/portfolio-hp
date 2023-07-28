@@ -6,11 +6,21 @@ interface TechStackTileProps {
   name: string;
   animation: boolean;
   delay: number;
-  small?: boolean; // Add a question mark to indicate that 'small' prop is optional
+  small?: boolean;
+  setTechDescText: (desc: string) => void;
+  desc?: string;
 }
 
 function TechStackTile(props: TechStackTileProps): JSX.Element {
-  const { icon: Icon, name, animation, delay, small } = props;
+  const {
+    icon: Icon,
+    name,
+    animation,
+    delay,
+    small,
+    desc,
+    setTechDescText,
+  } = props;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -23,22 +33,52 @@ function TechStackTile(props: TechStackTileProps): JSX.Element {
     }
   }, [animation, delay]);
 
-  return (
-    <li>
-      <figure
-        className={`${classes.tile} ${
-          isVisible && classes.animationSlideFromBottom
-        }`}
-      >
-        <div className={`${small ? classes.iconSmall : classes.icon}`}>
-          <Icon />
-        </div>
-        <figcaption className={`${small ? classes.textSmall : classes.text}`}>
-          <h2>{name}</h2>
-        </figcaption>
-      </figure>
-    </li>
-  );
+  const handleMouseEnter = () => {
+    if (desc) {
+      setTechDescText(desc);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setTechDescText("");
+  };
+  if (desc) {
+    return (
+      <li>
+        <figure
+          className={`${classes.tile} ${
+            isVisible && classes.animationSlideFromBottom
+          }`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className={`${small ? classes.iconSmall : classes.icon}`}>
+            <Icon />
+          </div>
+          <figcaption className={`${small ? classes.textSmall : classes.text}`}>
+            <h2>{name}</h2>
+          </figcaption>
+        </figure>
+      </li>
+    );
+  } else {
+    return (
+      <li>
+        <figure
+          className={`${classes.tile} ${
+            isVisible && classes.animationSlideFromBottom
+          }`}
+        >
+          <div className={`${small ? classes.iconSmall : classes.icon}`}>
+            <Icon />
+          </div>
+          <figcaption className={`${small ? classes.textSmall : classes.text}`}>
+            <h2>{name}</h2>
+          </figcaption>
+        </figure>
+      </li>
+    );
+  }
 }
 
 export default TechStackTile;

@@ -6,7 +6,7 @@ import TechStackList from "@/components/techStackList/TechStackList";
 import { techStackList } from "@/pages/api/projectList";
 function HomePage() {
   const [isAnimated, setIsAnimated] = useState(false);
-
+  const [techDescText, setTechDescText] = useState("");
   useEffect(() => {
     setIsAnimated(true);
   }, []);
@@ -47,7 +47,14 @@ function HomePage() {
           </div>
         </div>
         <section>
-          <TechStackList animation={isAnimated} techStack={techStackList} />
+          <TechStackList
+            animation={isAnimated}
+            techStack={techStackList}
+            setTechDescText={setTechDescText}
+          />
+          {techDescText && (
+            <p className={classes.techStackDesc}>{techDescText}</p>
+          )}
         </section>
       </main>
     </>

@@ -1,4 +1,4 @@
-@import "../../styles/config.module";
+@import "../../styles/config";
 @import "../../styles/mixins";
 
 .list {
@@ -24,7 +24,7 @@
   }
 
   h2 {
-    @include text($lightText, $violet, $textShadowSmallWhite);
+    @include text($lightText, $violet, $textShadowSmall);
     font-size: 1.75rem;
     margin: 0.5rem;
   }

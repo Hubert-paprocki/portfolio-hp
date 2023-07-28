@@ -1,4 +1,4 @@
-@import "./config.module";
+@import "./config";
 @import "./mixins";
 .main {
   background-color: $backgroundDark;
@@ -12,6 +12,7 @@
     }
     opacity: 0;
     clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 0 50%);
+
     @media (min-width: 1200px) {
       transform: translateX(125%);
       transition: 0.25s;
@@ -50,7 +51,7 @@
     @media (max-width: 768px) {
       font-size: 1.5rem;
     }
-    @include text($lightText, $violet, $textShadowWhite);
+    @include text($lightText, $violet, $textShadow);
     &Span {
       text-shadow: 3px 3px 1.5px $lightText;
       position: relative;
@@ -66,5 +67,12 @@
         right: 0px;
       }
     }
+  }
+
+  .techStackDesc {
+    @include text($lightText, $violet, _);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem 5% 2rem 5%;
   }
 }

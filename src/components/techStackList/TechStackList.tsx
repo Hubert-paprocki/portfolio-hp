@@ -7,10 +7,11 @@ interface TechStackListProps {
   animation: boolean;
   techStack: TechStack[];
   small?: boolean;
+  setTechDescText: (desc: string) => void;
 }
 
 function TechStackList(props: TechStackListProps) {
-  const { animation, techStack, small } = props;
+  const { animation, techStack, small, setTechDescText } = props;
   return (
     <ul className={classes.list}>
       {techStack.map((item, index) => {
@@ -24,6 +25,8 @@ function TechStackList(props: TechStackListProps) {
             animation={animation}
             delay={delay}
             small={small}
+            desc={desc}
+            setTechDescText={setTechDescText}
           />
         );
       })}

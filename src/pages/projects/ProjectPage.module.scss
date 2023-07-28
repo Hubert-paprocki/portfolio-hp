@@ -1,4 +1,4 @@
-@import "../../styles/config.module";
+@import "../../styles/config";
 @import "../../styles/mixins";
 
 .main {
@@ -9,6 +9,6 @@
   h1 {
     margin-top: 5rem;
     font-size: 3rem;
-    @include text($lightText, $violet, $textShadowWhite);
+    @include text($lightText, $violet, $textShadow);
   }
 }

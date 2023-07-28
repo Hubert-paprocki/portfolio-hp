@@ -1,5 +1,5 @@
-@import "../../styles/config.module";
-
+@import "../../styles/config";
+@import "../../styles/mixins";
 %icon-shared {
   display: flex;
   color: $mediumText;
@@ -38,7 +38,7 @@
   opacity: 0;
   transform: translateY(300%);
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     .icon {
       background-color: $violet;
       box-shadow: 0 0 10px 0 $violet;
@@ -50,8 +50,7 @@
       }
     }
     .text {
-      color: $lightText;
-      text-shadow: $textShadowSmall;
+      @include text($lightText, $violet, $textShadowSmall);
       &Small {
         color: $lightText;
         text-shadow: $textShadowSmaller;
