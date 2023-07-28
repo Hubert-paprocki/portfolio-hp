@@ -65,7 +65,7 @@ export const projectsArr: Project[] = [
     title: "Ambient",
     descShort:
       "Ambient is a website designed to help people focus while they study or work.",
-    descLong: "",
+    descLong: "					Ambient is a website designed to help people focus while they study orwork. The site features a variety of ambient sounds that users can listen to in the background while they complete their tasks.These sounds include nature sounds such as birds singing, thunder, and rain, as well as other calming sounds like white noise or city",
     techstack: [
       { icon: SiRedux, name: "Redux" },
       { icon: SiJavascript, name: "Javascript" },
