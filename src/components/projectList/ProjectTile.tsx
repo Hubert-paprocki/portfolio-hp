@@ -1,11 +1,11 @@
 import React from "react";
-import { Project } from "./ProjectList";
+import { Project } from "@/pages/api/projectList";
 import classes from "./Projects.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
 function ProjectTile(props: Project): JSX.Element {
-  const { title, img, descShort, link } = props;
+  const { img, descShort, link, title } = props;
   return (
     <li className={classes.tile}>
       <article>
@@ -15,7 +15,7 @@ function ProjectTile(props: Project): JSX.Element {
             width={100}
             height={100}
             layout="responsive"
-            alt={title}
+            alt=""
           />
           <figcaption>
             <h2>{title}</h2>

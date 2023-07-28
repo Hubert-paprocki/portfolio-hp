@@ -1,4 +1,19 @@
 @import "../../styles/config.module";
+
+%icon-shared {
+  display: flex;
+  color: $mediumText;
+  padding: 1rem;
+  border-radius: 100%;
+  background: $backgroundLight;
+  transition: 0.2s;
+}
+%text-shared {
+  padding-top: 1rem;
+  font-weight: 800;
+  color: $mediumText;
+}
+
 .list {
   width: 100%;
   display: flex;
@@ -25,34 +40,41 @@
   &:hover {
     transform: scale(1.3);
     .icon {
-      background: $violet;
+      background-color: $violet;
       box-shadow: 0 0 10px 0 $violet;
+      color: $lightText;
+      &Small {
+        background-color: $violet;
+        color: $lightText;
+        box-shadow: 0 0 5px 0 $violet;
+      }
     }
     .text {
       color: $lightText;
       text-shadow: $textShadowSmall;
+      &Small {
+        color: $lightText;
+        text-shadow: $textShadowSmaller;
+      }
     }
   }
 
   .icon {
-    display: flex;
-    color: $lightText;
+    @extend %icon-shared;
     font-size: 2.5rem;
-    padding: 1rem;
-    border-radius: 100%;
-    background: #2f2f2f;
-    transition: 0.2s;
+
+    &Small {
+      @extend %icon-shared;
+      font-size: 1.75rem;
+    }
   }
+
   .text {
-    padding-top: 1rem;
     font-size: large;
-    font-weight: 800;
-    color: #838383;
-    &::after {
-      background-color: rebeccapurple;
-      height: 10px;
-      width: 100px;
-      box-shadow: 0 0 10px 10px black;
+    @extend %text-shared;
+    &Small {
+      font-size: 13px;
+      @extend %text-shared;
     }
   }
 }

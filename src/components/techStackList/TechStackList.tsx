@@ -6,10 +6,11 @@ import { TechStack } from "@/pages/api/projectList";
 interface TechStackListProps {
   animation: boolean;
   techStack: TechStack[];
+  small?: boolean;
 }
 
 function TechStackList(props: TechStackListProps) {
-  const { animation, techStack } = props;
+  const { animation, techStack, small } = props;
   return (
     <ul className={classes.list}>
       {techStack.map((item, index) => {
@@ -22,6 +23,7 @@ function TechStackList(props: TechStackListProps) {
             name={name}
             animation={animation}
             delay={delay}
+            small={small}
           />
         );
       })}

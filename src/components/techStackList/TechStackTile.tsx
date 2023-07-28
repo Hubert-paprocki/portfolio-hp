@@ -6,10 +6,11 @@ interface TechStackTileProps {
   name: string;
   animation: boolean;
   delay: number;
+  small?: boolean; // Add a question mark to indicate that 'small' prop is optional
 }
 
 function TechStackTile(props: TechStackTileProps): JSX.Element {
-  const { icon: Icon, name, animation, delay } = props;
+  const { icon: Icon, name, animation, delay, small } = props;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -29,11 +30,11 @@ function TechStackTile(props: TechStackTileProps): JSX.Element {
           isVisible && classes.animationSlideFromBottom
         }`}
       >
-        <div className={classes.icon}>
+        <div className={`${small ? classes.iconSmall : classes.icon}`}>
           <Icon />
         </div>
-        <figcaption className={classes.text}>
-          <p>{name}</p>
+        <figcaption className={`${small ? classes.textSmall : classes.text}`}>
+          <h2>{name}</h2>
         </figcaption>
       </figure>
     </li>
