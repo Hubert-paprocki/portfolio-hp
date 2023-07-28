@@ -1,7 +1,12 @@
 $violet: #a5f;
-$backgroundDark: #161616;
-$lightText: #e7e7e7;
 $backgroundLight: #222222;
+$backgroundDark: #161616;
+
+$lightText: #e7e7e7;
+$violetText: #b061ff;
 
 $textShadowSmall: 1px 1px $violet;
-$textShadowSmallWhite: 1px 1px $lightText;
+$textShadowSmallWhite: 1px 1px;
+$textShadowWhite: 3px 3px 1.5px;
+
+$roundedMd: 1rem;
