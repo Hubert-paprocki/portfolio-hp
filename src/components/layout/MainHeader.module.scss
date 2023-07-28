@@ -19,14 +19,13 @@
   width: 100%;
   align-items: center;
   gap: 1.5rem;
-
   li {
     list-style: none;
     display: flex;
     color: $lightText;
 
     &:first-of-type {
-      color: $violet;
+      color: $violetText;
       flex-grow: 1;
     }
   }

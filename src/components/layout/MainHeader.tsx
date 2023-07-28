@@ -9,8 +9,8 @@ interface HeaderLinks {
 const headerLinks: HeaderLinks[] = [
   { link: "/", name: "Hubert Paprocki" },
   { link: "/about", name: "About Me" },
-  { link: "/Projects", name: "Projects" },
-  { link: "/Contact", name: "Contact" },
+  { link: "/projects", name: "Projects" },
+  { link: "/contact", name: "Contact" },
 ];
 
 function MainHeader() {

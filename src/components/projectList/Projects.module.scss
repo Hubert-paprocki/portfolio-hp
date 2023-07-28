@@ -1,0 +1,50 @@
+@import "../../styles/config.module";
+@import "../../styles/mixins";
+
+.list {
+  margin: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.tile {
+  background-color: $backgroundLight;
+  padding: 2.5rem;
+  border-radius: $roundedMd;
+  list-style: none;
+  max-width: 800px;
+  transition: 0.2s;
+
+  &:hover {
+    box-shadow: 0 0 15px 0 rgba($violet, 0.3);
+    transform: scale(105%);
+  }
+
+  h2 {
+    @include text($lightText, $violet, $textShadowSmallWhite);
+    text-align: center;
+    font-size: 1.75rem;
+    margin: 0.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  a {
+    color: $violetText;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      transform: translateX(10px);
+    }
+  }
+  img {
+    border-radius: $roundedMd;
+    max-height: 375px;
+    object-fit: cover;
+    object-position: top;
+  }
+}
