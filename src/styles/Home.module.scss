@@ -1,5 +1,5 @@
 @import "./config.module";
-
+@import "./mixins";
 .main {
   background-color: $backgroundDark;
 
@@ -50,10 +50,7 @@
     @media (max-width: 768px) {
       font-size: 1.5rem;
     }
-    color: $lightText;
-    font-weight: 500;
-    text-shadow: 3px 3px 1.5px #aa55ff;
-
+    @include text($lightText, $violet, $textShadowWhite);
     &Span {
       text-shadow: 3px 3px 1.5px $lightText;
       position: relative;
