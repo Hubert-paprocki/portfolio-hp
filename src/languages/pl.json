@@ -1,0 +1,20 @@
+{
+  "headerLinks": ["O mnie", "Projekty", "Kontakt"],
+  "homePage": {
+    "title": ["Cześć, witaj! Nazywam się", "i być może jestem tym, czego szukasz."]
+  },
+  "techStackDesc":{
+    "JavaScript":"",
+    "TypeScript":"",
+    "React":"",
+    "Next":"",
+    "Redux":"",
+    "Sass":"",
+    "Tailwind":"",
+    "CSS3":"",
+    "HTML5":"",
+    "Jest":"",
+    "GitHub":"", 
+    "firebase":""
+  }
+}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import classes from "./MainHeader.module.scss";
+import LanguageSwitch from "../languageButton/LanguageButton";
 
 interface HeaderLinks {
   link: string;
@@ -33,6 +34,9 @@ function MainHeader() {
           })}
         </ul>
       </nav>
+      <div className={classes.langSwitch}>
+        <LanguageSwitch />
+      </div>
     </header>
   );
 }

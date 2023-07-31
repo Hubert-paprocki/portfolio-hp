@@ -1,0 +1,21 @@
+{
+  "headerLinks":["About Me","Projects","Contact"]
+  ,
+  "homePage":{
+    "title":["Hi, welcome! My name is","and I might be what you are looking for."]
+  }, 
+ "techStackDesc":{
+    "JavaScript":"",
+    "TypeScript":"",
+    "React":"Completely captivated by React's simplicity and speed of development, not to mention the sheer joy of manipulating the DOM effortlessly!",
+    "Next":"Sign me up for React with seamless routing, Server-Side Rendering, and enhanced SEO capabilities in Next.js!",
+    "Redux":"I have already completed several projects using Redux, and although I prefer pure React due to its reduced boilerplate, I understand the purpose and the benefits of using Redux",
+    "Sass":"Sass is simply amazing!",
+    "Tailwind":"I have a love-hate relationship with Tailwind CSS. It can get messy, but its simplicity and quick application are definite pluses.",
+    "CSS3":"I started my adventure with CSS back in high school when teachers asked us to write styles on paper, and I must admit that it's much better when you can see the changes on the monitor.",
+    "HTML5":"Similarly to CSS, my introduction to learning HTML took place during my time in high school.",
+    "Jest":"I am still a novice when it comes to using Jest for testing, but I know how to test basic components.",
+    "GitHub":"Since 2022, I've been using GitHub and Git for various projects, including collaborative ones, making me proficient in navigating through branches", 
+    "firebase":"I have extensively utilized Firebase in numerous of my projects, and I am well-versed in the vast array of features it offers."
+  }
+}

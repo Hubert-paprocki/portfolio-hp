@@ -37,7 +37,6 @@ export const projectsArr: Project[] = [
     descLong:
       "Simple Weather is a weather application that provides current weather information based on the user's location. It utilizes the WeatherAPI.com API to retrieve weather data.",
     techstack: [
-      { icon: SiJavascript, name: "Javascript" },
       { icon: SiReact, name: "React" },
       { icon: SiTypescript, name: "Typescript" },
       { icon: SiTailwindcss, name: "Tailwind" },
@@ -68,7 +67,6 @@ export const projectsArr: Project[] = [
     descLong: "					Ambient is a website designed to help people focus while they study orwork. The site features a variety of ambient sounds that users can listen to in the background while they complete their tasks.These sounds include nature sounds such as birds singing, thunder, and rain, as well as other calming sounds like white noise or city",
     techstack: [
       { icon: SiRedux, name: "Redux" },
-      { icon: SiJavascript, name: "Javascript" },
       { icon: SiReact, name: "React" },
       { icon: SiTypescript, name: "Typescript" },
       { icon: SiSass, name: "SCSS" },
@@ -84,7 +82,6 @@ export const projectsArr: Project[] = [
       "Cookie Clicker is a fun and addictive idle game where you click on a giant cookie to earn cookies. The more cookies you earn, the more upgrades and power-ups you can unlock to automate the cookie production process and earn even more cookies.",
     techstack: [
       { icon: SiRedux, name: "Redux" },
-      { icon: SiJavascript, name: "Javascript" },
       { icon: SiReact, name: "React" },
       { icon: SiTypescript, name: "Typescript" },
       { icon: SiTailwindcss, name: "Tailwind" },

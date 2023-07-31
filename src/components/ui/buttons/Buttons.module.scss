@@ -1,0 +1,17 @@
+@import "../../../styles/config";
+@import "../../../styles/mixins";
+
+.lang {
+  transition: 0.2s;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+
+  &:active {
+    transform: rotate(360deg);
+  }
+}
