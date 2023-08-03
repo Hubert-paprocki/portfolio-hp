@@ -2,13 +2,17 @@
 @import "./mixins";
 .main {
   background-color: $backgroundDark;
-
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
   &Wrapper {
     display: flex;
   }
   .img {
     &Wrapper {
       width: 40%;
+      position: relative;
+      max-height: 900px;
     }
     opacity: 0;
     clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 0 50%);
@@ -16,15 +20,12 @@
     @media (min-width: 1200px) {
       transform: translateX(125%);
       transition: 0.25s;
-      max-height: 900px;
       object-fit: cover;
     }
   }
 
   .left {
-    padding-left: 8%;
-    padding-top: 10%;
-    padding-right: 1rem;
+    padding: 5rem 5rem 5rem 5rem;
     transition: 1s;
     transform: translateX(125%);
     opacity: 0;
@@ -56,10 +57,12 @@
       text-shadow: 3px 3px 1.5px $lightText;
       position: relative;
       color: transparent;
+      white-space: nowrap;
       &After {
         text-shadow: none;
         position: absolute;
         background: linear-gradient(to top right, $violet 36%, #cf194f 76%);
+        user-select: none;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;

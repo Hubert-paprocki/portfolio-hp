@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import ProjectList from "@/components/projectList/ProjectList";
-import classes from "./ProjectPage.module.scss";
+import classes from "./ProjectsPage.module.scss";
 import Head from "next/head";
 import LanguageContext from "@/context/LangContext";
 

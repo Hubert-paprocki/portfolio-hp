@@ -41,9 +41,7 @@ function HomePage() {
           <div className={classes.imgWrapper}>
             <Image
               src="/images/me.jpg"
-              width={100}
-              height={100}
-              layout="responsive"
+              fill
               alt="me, the dev"
               className={`${classes.img} ${
                 isAnimated && classes.animationSlideFromLeft
