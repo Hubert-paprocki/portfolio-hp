@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import { projectsArr, Project } from "@/pages/api/projectList";
 import Image from "next/image";
 import TechStackList from "@/components/techStackList/TechStackList";
+import LanguageContext from "@/context/LangContext";
+import { translateList } from "@/components/techStackList/TechStackList";
 
 function ProjectDetails(): JSX.Element {
   const [isAnimated, setIsAnimated] = useState(false);
+  const { selectedLanguage } = useContext(LanguageContext);
+  const projectLanguage = selectedLanguage.projectPage.project;
   const router = useRouter();
   const { projectId } = router.query;
 
@@ -21,8 +25,9 @@ function ProjectDetails(): JSX.Element {
     return <div>Project not found.</div>;
   }
 
-  const { title, img, descLong, techstack } = project;
-
+  const { title, img, techstack, id } = project;
+  const translatedProject = translateList(id, projectLanguage);
+  console.log(translatedProject);
   return (
     <main>
       <article>
@@ -30,7 +35,7 @@ function ProjectDetails(): JSX.Element {
           <Image src={`/images/${img}`} width={100} height={100} alt={title} />
           <figcaption>
             <h1>{title}</h1>
-            <p>{descLong}</p>
+            <p>{translatedProject.descLong}</p>
           </figcaption>
         </figure>
         <TechStackList animation={isAnimated} techStack={techstack} small />

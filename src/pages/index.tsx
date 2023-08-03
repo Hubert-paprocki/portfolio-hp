@@ -1,12 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import classes from "@/styles/Home.module.scss";
 import TechStackList from "@/components/techStackList/TechStackList";
 import { techStackList } from "@/pages/api/projectList";
+import LanguageContext from "@/context/LangContext";
+
 function HomePage() {
+  const { selectedLanguage } = useContext(LanguageContext);
   const [isAnimated, setIsAnimated] = useState(false);
   const [techDescText, setTechDescText] = useState("");
+  const homePageLanguage = selectedLanguage.homePage;
+
   useEffect(() => {
     setIsAnimated(true);
   }, []);
@@ -25,11 +30,11 @@ function HomePage() {
           >
             <h1 className={classes.heading}>
               <em>
-                Hi, welcome! My name is{" "}
+                {homePageLanguage.title[0]}{" "}
                 <span className={classes.headingSpan}>
                   Hubert<span className={classes.headingSpanAfter}>Hubert</span>
                 </span>
-                , and I might be what you are looking for.
+                {homePageLanguage.title[1]}
               </em>
             </h1>
           </section>

@@ -2,20 +2,44 @@
   "headerLinks":["About Me","Projects","Contact"]
   ,
   "homePage":{
-    "title":["Hi, welcome! My name is","and I might be what you are looking for."]
+    "title":["Hi, welcome! My name is",", and I might be what you are looking for."]
   }, 
  "techStackDesc":{
-    "JavaScript":"",
-    "TypeScript":"",
-    "React":"Completely captivated by React's simplicity and speed of development, not to mention the sheer joy of manipulating the DOM effortlessly!",
-    "Next":"Sign me up for React with seamless routing, Server-Side Rendering, and enhanced SEO capabilities in Next.js!",
-    "Redux":"I have already completed several projects using Redux, and although I prefer pure React due to its reduced boilerplate, I understand the purpose and the benefits of using Redux",
-    "Sass":"Sass is simply amazing!",
-    "Tailwind":"I have a love-hate relationship with Tailwind CSS. It can get messy, but its simplicity and quick application are definite pluses.",
-    "CSS3":"I started my adventure with CSS back in high school when teachers asked us to write styles on paper, and I must admit that it's much better when you can see the changes on the monitor.",
-    "HTML5":"Similarly to CSS, my introduction to learning HTML took place during my time in high school.",
-    "Jest":"I am still a novice when it comes to using Jest for testing, but I know how to test basic components.",
-    "GitHub":"Since 2022, I've been using GitHub and Git for various projects, including collaborative ones, making me proficient in navigating through branches", 
+    "js":"",
+    "ts":"",
+    "react":"Completely captivated by React's simplicity and speed of development, not to mention the sheer joy of manipulating the DOM effortlessly!",
+    "next":"Sign me up for React with seamless routing, Server-Side Rendering, and enhanced SEO capabilities in Next.js!",
+    "redux":"I have already completed several projects using Redux, and although I prefer pure React due to its reduced boilerplate, I understand the purpose and the benefits of using Redux",
+    "sass":"Sass is simply amazing!",
+    "tailwind":"I have a love-hate relationship with Tailwind CSS. It can get messy, but its simplicity and quick application are definite pluses.",
+    "css":"I started my adventure with CSS back in high school when teachers asked us to write styles on paper, and I must admit that it's much better when you can see the changes on the monitor.",
+    "html":"Similarly to CSS, my introduction to learning HTML took place during my time in high school.",
+    "jest":"I am still a novice when it comes to using Jest for testing, but I know how to test basic components.",
+    "gitHub":"Since 2022, I've been using GitHub and Git for various projects, including collaborative ones, making me proficient in navigating through branches", 
     "firebase":"I have extensively utilized Firebase in numerous of my projects, and I am well-versed in the vast array of features it offers."
+  },
+  "projectPage":{"title":"My Projects",
+  "project":{
+    "learnMore":"Learn more",
+    "simpleWeather":{
+      "descShort":"Simple Weather is a weather application that provides current weather information based on the user's location.",
+      "descLong":"Simple Weather is a weather application that provides current weather information based on the user's location. It utilizes the WeatherAPI.com API to retrieve weather data."
+  },
+    "toDo":{     
+      "descShort":"This is a simple ToDo application that allows you to manage your tasks and keep track of your progress.",
+      "descLong":"This is a simple ToDo application that allows you to manage your tasks and keep track of your progress. It provides a user-friendly interface, modern look and basic functionality for creating, editing, and completing tasks."
+  },
+    "ambient":{     
+      "descShort":"Ambient is a website designed to help people focus while they study or work.",
+      "descLong":"Ambient is a website designed to help people focus while they study orwork. The site features a variety of ambient sounds that users can listen to in the background while they complete their tasks.These sounds include nature sounds such as birds singing, thunder, and rain, as well as other calming sounds like white noise or city"
+  },
+    "cookieClicker":{    
+      "descShort":"Cookie Clicker is a fun and addictive idle game where you click on a giant cookie to earn cookies.",
+    " descLong":"Cookie Clicker is a fun and addictive idle game where you click on a giant cookie to earn cookies. The more cookies you earn, the more upgrades and power-ups you can unlock to automate the cookie production process and earn even more cookies."
   }
+ }
+},
+"aboutMePage":{
+  "desc":"I am an ambitious Junior Frontend web developer with a passion for learning and improving my skills in the IT industry. I acquire my knowledge through online courses, such as Udemy, or by solving tasks on Code Wars. I am ready for the challenges that working in the front-end department brings. My motivation for work comes from the opportunity to work on interesting projects and continuously enhance my skills. I am looking for a job in a company that offers growth and shares similar values to mine."
+}
 }

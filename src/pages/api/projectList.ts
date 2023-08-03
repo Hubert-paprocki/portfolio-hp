@@ -20,6 +20,7 @@ export interface TechStack {
 }
 
 export interface Project {
+  id:string
   img: string;
   title: string;
   descShort: string;
@@ -30,12 +31,13 @@ export interface Project {
 
 export const projectsArr: Project[] = [
   {
+    id:"simpleWeather",
     img: "simpleWeather.png",
     title: "Simple Weather",
     descShort:
-      "Simple Weather is a weather application that provides current weather information based on the user's location.",
+      "descShort",
     descLong:
-      "Simple Weather is a weather application that provides current weather information based on the user's location. It utilizes the WeatherAPI.com API to retrieve weather data.",
+      "descLong",
     techstack: [
       { icon: SiReact, name: "React" },
       { icon: SiTypescript, name: "Typescript" },
@@ -45,12 +47,13 @@ export const projectsArr: Project[] = [
     link: "simple-weather",
   },
   {
+    id:"toDo",
     img: "todo.png",
     title: "What's the plan?",
     descShort:
-      "This is a simple ToDo application that allows you to manage your tasks and keep track of your progress.",
+      "descShort",
     descLong:
-      "This is a simple ToDo application that allows you to manage your tasks and keep track of your progress. It provides a user-friendly interface, modern look and basic functionality for creating, editing, and completing tasks.",
+      "descLong",
     techstack: [
       { icon: SiJavascript, name: "Javascript" },
       { icon: SiReact, name: "React" },
@@ -60,11 +63,12 @@ export const projectsArr: Project[] = [
     link: "whats-the-plan",
   },
   {
+    id:"ambient",
     img: "ambient.png",
     title: "Ambient",
     descShort:
-      "Ambient is a website designed to help people focus while they study or work.",
-    descLong: "					Ambient is a website designed to help people focus while they study orwork. The site features a variety of ambient sounds that users can listen to in the background while they complete their tasks.These sounds include nature sounds such as birds singing, thunder, and rain, as well as other calming sounds like white noise or city",
+      "descShort",
+    descLong: "descLong",
     techstack: [
       { icon: SiRedux, name: "Redux" },
       { icon: SiReact, name: "React" },
@@ -74,12 +78,13 @@ export const projectsArr: Project[] = [
     link: "ambient",
   },
   {
+    id:"cookieClicker",
     img: "cookieClicker.png",
     title: "Cookie Clicker",
     descShort:
-      "Cookie Clicker is a fun and addictive idle game where you click on a giant cookie to earn cookies.",
+      "descShort",
     descLong:
-      "Cookie Clicker is a fun and addictive idle game where you click on a giant cookie to earn cookies. The more cookies you earn, the more upgrades and power-ups you can unlock to automate the cookie production process and earn even more cookies.",
+      "descLong",
     techstack: [
       { icon: SiRedux, name: "Redux" },
       { icon: SiReact, name: "React" },
@@ -94,44 +99,44 @@ export const projectsArr: Project[] = [
 
 
 export const techStackList: TechStack[] = [
-  { icon: SiJavascript, name: "JavaScript", desc: "" },
-  { icon: SiTypescript, name: "TypeScript", desc: "" },
-  { icon: SiReact, name: "React", desc: "" },
-  { icon: SiNextdotjs, name: "Next.js", desc: "" },
+  { icon: SiJavascript, name: "JavaScript", desc: "js" },
+  { icon: SiTypescript, name: "TypeScript", desc: "ts" },
+  { icon: SiReact, name: "React", desc: "react" },
+  { icon: SiNextdotjs, name: "Next.js", desc: "next" },
   {
     icon: SiRedux,
     name: "Redux",
-    desc: "I have already completed several projects using Redux, and although I prefer pure React due to its reduced boilerplate, I understand the purpose and the benefits of using Redux",
+    desc: "redux",
   },
-  { icon: SiSass, name: "Sass", desc: "Sass is simply amazing!" },
+  { icon: SiSass, name: "Sass", desc: "sass" },
   {
     icon: SiTailwindcss,
     name: "Tailwind",
-    desc: "I have a love-hate relationship with Tailwind CSS. It can get messy, but its simplicity and quick application are definite pluses.",
+    desc: "tailwind",
   },
   {
     icon: SiCss3,
     name: "CSS3",
-    desc: "I started my adventure with CSS back in high school when teachers asked us to write styles on paper, and I must admit that it's much better when you can see the changes on the monitor.",
+    desc: "css",
   },
   {
     icon: SiHtml5,
     name: "HTML5",
-    desc: "Similarly to CSS, my introduction to learning HTML took place during my time in high school.",
+    desc: "html",
   },
   {
     icon: SiJest,
     name: "Jest",
-    desc: "I am still a novice when it comes to using Jest for testing, but I know how to test basic components.",
+    desc: "jest",
   },
   {
     icon: SiGithub,
     name: "GitHub",
-    desc: "Since 2022, I've been using GitHub and Git for various projects, including collaborative ones, making me proficient in navigating through branches",
+    desc: "github",
   },
   {
     icon: SiFirebase,
-    name: "firebase",
-    desc: "",
+    name: "Firebase",
+    desc: "firebase",
   },
 ];
