@@ -5,17 +5,20 @@
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
+
   &Wrapper {
     display: flex;
   }
   .img {
+    opacity: 0;
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 0 50%);
+    cursor: pointer;
+
     &Wrapper {
       width: 40%;
       position: relative;
       max-height: 900px;
     }
-    opacity: 0;
-    clip-path: polygon(40% 0, 100% 0, 100% 100%, 40% 100%, 0 50%);
 
     @media (min-width: 1200px) {
       transform: translateX(125%);

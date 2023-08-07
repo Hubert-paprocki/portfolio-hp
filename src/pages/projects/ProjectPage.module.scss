@@ -1,0 +1,102 @@
+@import "../../styles/config";
+@import "../../styles/mixins";
+
+.main {
+  display: flex;
+  height: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 1500px) {
+    background-color: $backgroundLight;
+    align-items: baseline;
+    justify-content: center;
+  }
+  article {
+    padding: 1.25rem;
+    @media (min-width: 1400px) {
+      padding: 2rem;
+    }
+    border-radius: $roundedMd;
+    background-color: $backgroundLight;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (min-width: 751px) {
+        flex-direction: row;
+      }
+      .imgWrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 70%;
+        @media (min-width: 751px) {
+          width: 66.66%;
+          padding-top: 50%;
+        }
+
+        img {
+          border-radius: $roundedMd;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .right {
+        width: 100%;
+        padding: 0 1rem 0 1rem;
+        @media (min-width: 751px) {
+          width: 50%;
+          padding: 0 0 0 2rem;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        @media (min-width: 1200px) {
+          padding-left: 3rem;
+        }
+      }
+    }
+    h1 {
+      @include text($lightText, $violet, $textShadow);
+      font-size: 1.8rem;
+      flex-grow: 1;
+      padding: 1rem 0 1rem 0;
+      @media (min-width: 853px) {
+        font-size: 2.25rem;
+      }
+      @media (min-width: 1400px) {
+        font-size: 2.75rem;
+      }
+    }
+    p {
+      padding: 1rem 0 1rem 0;
+      font-size: 0.9rem;
+      color: $lightText;
+      line-height: 1.8rem;
+      @media (min-width: 1100px) {
+        font-size: 1.1rem;
+      }
+      @media (min-width: 1200px) {
+        line-height: 2.25rem;
+      }
+      @media (min-width: 1400px) {
+        font-size: 1.6rem;
+        @include text($lightText, $violet, $textShadowSmall);
+      }
+    }
+    a {
+      text-shadow: none;
+      font-weight: 400;
+      text-decoration: underline;
+      white-space: nowrap;
+      color: $violet;
+      transition: color 0.2s;
+      &:hover {
+        color: lighten($violet, 10%);
+      }
+    }
+  }
+}

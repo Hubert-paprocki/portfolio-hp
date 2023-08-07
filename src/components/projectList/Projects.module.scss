@@ -6,43 +6,91 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   gap: 3rem;
 }
 
 .tile {
+  .imgWrap {
+    position: relative;
+    width: 100%;
+    padding: 75% 0 0 0;
+    transition: 0.2s;
+    img {
+      border-radius: $roundedMd;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
   background-color: $backgroundLight;
-  padding: 2.5rem;
+  padding: 1rem;
+  @media (min-width: 650px) {
+    padding: 1.5rem;
+  }
+  @media (min-width: 800px) {
+    padding: 2.5rem;
+  }
   border-radius: $roundedMd;
   list-style: none;
   max-width: 800px;
   transition: 0.2s;
   text-align: center;
   &:hover {
+    overflow: hidden;
+    padding: 0;
+    .textWrapper {
+      padding: 0 1rem;
+      @media (min-width: 650px) {
+        padding: 0 1.5rem 1.5rem;
+      }
+      @media (min-width: 800px) {
+        padding: 0 2.5rem 2.5rem;
+      }
+    }
     box-shadow: 0 0 15px 0 rgba($violet, 0.3);
-    transform: scale(105%);
-  }
-
-  h2 {
-    @include text($lightText, $violet, $textShadowSmall);
-    font-size: 1.75rem;
-    margin: 0.5rem;
-  }
-  p {
-    font-size: 1.2rem;
-  }
-  a {
-    color: $violetText;
-
-    &:hover {
-      text-decoration: underline;
-      transform: translateX(10px);
+    .imgWrap {
+      img {
+        border-radius: 0;
+      }
     }
   }
-  img {
-    border-radius: $roundedMd;
-    max-height: 375px;
-    object-fit: cover;
-    object-position: top;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .textWrapper {
+    transition: 0.2s;
+    h2 {
+      @include text($lightText, $violet, $textShadowSmall);
+      font-size: 1.25rem;
+      margin: 0.5rem;
+      @media (min-width: 600px) {
+        font-size: 1.5rem;
+      }
+      @media (min-width: 800px) {
+        font-size: 1.75rem;
+      }
+    }
+    p {
+      font-size: 0.9rem;
+      @media (min-width: 600px) {
+        font-size: 1rem;
+      }
+      @media (min-width: 800px) {
+        font-size: 1.2rem;
+      }
+    }
+    a {
+      color: $violetText;
+
+      &:hover {
+        text-decoration: underline;
+        transform: translateX(10px);
+      }
+    }
   }
 }

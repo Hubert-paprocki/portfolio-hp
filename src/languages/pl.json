@@ -4,20 +4,20 @@
     "title": ["Cześć, witaj! Nazywam się", ", i być może jestem tym, kogo szukasz."]
   },
   "techStackDesc": {
-    "js": "",
-    "ts": "",
-    "react": "Uwielbiam prostotę i szybkość Reacta, a także łatwe manipulowane DOMem!",
-    "next": "Zapisuję się na Reacta z bezproblemowym routowaniem, renderowaniem po stronie serwera i zwiększonymi możliwościami SEO w Next.js!",
-    "redux": "Już wykonałem kilka projektów, używając Reduxa, i mimo że wolę czystego Reacta z powodu mniejszej ilości zbędnego kodu, rozumiem cel i korzyści wynikające z używania Reduxa.",
-    "sass": "Sass jest po prostu niesamowity!",
-    "tailwind": "Mam miłość i nienawiść do Tailwind CSS. Czasem może być niezbyt uporządkowany, ale jego prostota i szybkie zastosowanie są zdecydowanymi zaletami.",
-    "css": "Zaczynałem swoją przygodę z CSS w liceum, gdzie nauczyciele kazali nam pisać style na kartce papieru, i muszę przyznać, że o wiele lepiej jest widzieć zmiany na ekranie.",
-    "html": "Podobnie jak w przypadku CSS, moje pierwsze kroki z HTML miały miejsce w czasie nauki w technikum.",
-    "jest": "Jestem jeszcze początkującym użytkownikiem Jest, ale potrafię testować podstawowe komponenty.",
-    "github": "Od 2022 roku korzystam z GitHuba i Gita w różnych projektach, w tym tych współpracujących, dzięki czemu dobrze orientuję się w pracy z gałęziami.",
-    "firebase": "Wiele razy korzystałem z Firebase w moich projektach i znam wiele jego funkcji."
+    "JavaScript": "",
+    "TypeScript": "",
+    "React": "Uwielbiam prostotę i szybkość Reacta, a także łatwe manipulowane DOMem!",
+    "Next.js": "Zapisuję się na Reacta z bezproblemowym routowaniem, renderowaniem po stronie serwera i zwiększonymi możliwościami SEO w Next.js!",
+    "Redux": "Już wykonałem kilka projektów, używając Reduxa, i mimo że wolę czystego Reacta z powodu mniejszej ilości zbędnego kodu, rozumiem cel i korzyści wynikające z używania Reduxa.",
+    "Sass": "Sass jest po prostu niesamowity!",
+    "Tailwind": "Mam miłość i nienawiść do Tailwind CSS. Czasem może być niezbyt uporządkowany, ale jego prostota i szybkie zastosowanie są zdecydowanymi zaletami.",
+    "CSS3": "Zaczynałem swoją przygodę z CSS w liceum, gdzie nauczyciele kazali nam pisać style na kartce papieru, i muszę przyznać, że o wiele lepiej jest widzieć zmiany na ekranie.",
+    "HTML5": "Podobnie jak w przypadku CSS, moje pierwsze kroki z HTML miały miejsce w czasie nauki w technikum.",
+    "Jest": "Jestem jeszcze początkującym użytkownikiem Jest, ale potrafię testować podstawowe komponenty.",
+    "GitHub": "Od 2022 roku korzystam z GitHuba i Gita w różnych projektach, w tym tych współpracujących, dzięki czemu dobrze orientuję się w pracy z gałęziami.",
+    "Firebase": "Wiele razy korzystałem z Firebase w moich projektach i znam wiele jego funkcji."
   },
-  "projectPage":{"title":"My Projects",
+  "projectPage":{"title":"Moje Projekty",
   "project": {
     "learnMore": "Zobacz więcej",
     "simpleWeather": {
@@ -35,10 +35,15 @@
     "cookieClicker": {
       "descShort": "Cookie Clicker to zabawna i wciągająca gra typu idle, w której klikasz na gigantyczne ciastko, aby zdobywać ciasteczka.",
       "descLong": "Cookie Clicker to zabawna i wciągająca gra typu idle, w której klikasz na gigantyczne ciastko, aby zdobywać ciasteczka. Im więcej ciasteczek zdobędziesz, tym więcej ulepszeń i power-upów odblokujesz, aby zautomatyzować proces produkcji ciastek i zdobywać jeszcze więcej ciasteczek."
-    }
+    }, 
+    "pswrdgn": {
+      "descShort":"Mała aplikacja pozwalająca na generowanie haseł.",
+      "descLong":"Mała aplikacja pozwalająca na generowanie haseł. Użytkownicy mogą dostosować swoje hasła, wybierając spośród różnych opcji, takich jak liczby, znaki specjalne, wielkie litery oraz długość hasła. Dzięki tej elastyczności, tworzenie bezpiecznych i unikalnych haseł staje się szybkie i łatwe."
+   }
   },
   "aboutMePage": {
     "desc": "Jestem ambitnym Junior Frontend web developerem z zamiłowaniem do nauki i rozwijania swoich umiejętności w branży IT. Swoją wiedzę zdobywam poprzez kursy online, takie jak Udemy lub po prostu naukę samemu podczas robienia projektów. Jestem gotowy na wyzwania, które stawia przede mną praca w dziale front-endu. Moją motywacją do pracy jest możliwość realizacji ciekawych projektów oraz ciągłe podnoszenie swoich umiejętności. Poszukuję pracy w firmie, która oferuje rozwój i ma podobne wartości, co ja."
     }
+
   }
 }  

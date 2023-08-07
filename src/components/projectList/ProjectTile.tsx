@@ -5,7 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import LanguageContext from "@/context/LangContext";
 
-function ProjectTile(props: Project): JSX.Element {
+interface ProjectTileProps extends Project {
+  descShort: string;
+  descLong: string;
+  outLink: string;
+}
+
+function ProjectTile(props: ProjectTileProps): JSX.Element {
   const { selectedLanguage } = useContext(LanguageContext);
   const projectTileLanguage = selectedLanguage.projectPage.project.learnMore;
   const { img, descShort, link, title } = props;
@@ -13,18 +19,14 @@ function ProjectTile(props: Project): JSX.Element {
   return (
     <li className={classes.tile}>
       <article>
-        <figure>
-          <Image
-            src={`/images/${img}`}
-            width={100}
-            height={100}
-            layout="responsive"
-            alt=""
-          />
-          <figcaption>
+        <figure className={classes.container}>
+          <div className={classes.imgWrap}>
+            <Image src={`/images/${img}`} fill alt={`${title} app thumbnail`} />
+          </div>
+          <figcaption className={classes.textWrapper}>
             <h2>{title}</h2>
             <p>
-              {descShort}{" "}
+              {descShort}
               <Link href={`projects/${link}`}> {projectTileLanguage}</Link>
             </p>
           </figcaption>

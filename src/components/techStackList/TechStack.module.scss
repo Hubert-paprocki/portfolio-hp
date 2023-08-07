@@ -1,31 +1,56 @@
 @import "../../styles/config";
 @import "../../styles/mixins";
+
 %icon-shared {
-  display: flex;
   color: $mediumText;
   padding: 1rem;
+  display: flex;
   border-radius: 100%;
   background: $backgroundLight;
-  transition: 0.2s;
+  transition:
+    color,
+    background-color 0.2s;
 }
+
 %text-shared {
-  padding-top: 1rem;
   font-weight: 800;
   color: $mediumText;
 }
 
-.list {
+%list-shared {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem 5% 2rem 5%;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
   position: relative;
-  transition: 1.5s;
+
   li {
     list-style: none;
+  }
+}
+
+.list {
+  @extend %list-shared;
+  padding: 2rem 5% 2rem 5%;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  &Small {
+    @extend %list-shared;
+    padding: 1rem 0 1rem 0;
+    gap: 0.5rem;
+
+    @media (min-width: 1200px) {
+      gap: 1rem;
+    }
+    @media (min-width: 1300px) {
+      gap: 1.5rem;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 1016px) {
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 
@@ -43,6 +68,7 @@
       background-color: $violet;
       box-shadow: 0 0 10px 0 $violet;
       color: $lightText;
+
       &Small {
         background-color: $violet;
         color: $lightText;
@@ -53,7 +79,9 @@
       @include text($lightText, $violet, $textShadowSmall);
       &Small {
         color: $lightText;
-        text-shadow: $textShadowSmaller;
+        @media (min-width: 1016px) {
+          text-shadow: $textShadowSmaller;
+        }
       }
     }
   }
@@ -61,19 +89,51 @@
   .icon {
     @extend %icon-shared;
     font-size: 2.5rem;
-
     &Small {
       @extend %icon-shared;
-      font-size: 1.75rem;
+      font-size: 1.5rem;
+      display: none;
+      @media (min-width: 1016px) {
+        display: flex;
+      }
+      @media (min-width: 1400px) {
+        font-size: 1.75rem;
+      }
     }
   }
 
   .text {
     font-size: large;
     @extend %text-shared;
+    margin-top: 1rem;
+
     &Small {
-      font-size: 13px;
       @extend %text-shared;
+      border: $mediumText 2px solid;
+      border-radius: $roundedMd;
+      padding: 0.4rem 1rem 0.4rem 1rem;
+      font-size: 0.5rem;
+      transition: 0.2s;
+      &:hover {
+        border: $violet 2px solid;
+        @media (min-width: 1016px) {
+          border: none;
+        }
+      }
+
+      @media (min-width: 1016px) {
+        border: none;
+        border-radius: none;
+        padding: none;
+        font-size: 0.6rem;
+      }
+      @media (min-width: 1200px) {
+        font-size: 0.7rem;
+      }
+
+      @media (min-width: 1400px) {
+        font-size: 0.8rem;
+      }
     }
   }
 }

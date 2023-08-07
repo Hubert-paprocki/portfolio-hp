@@ -10,20 +10,6 @@ interface TechStackListProps {
   small?: boolean;
   setTechDescText?: (desc: string) => void;
 }
-interface techStackListDescLanguage {
-  js: string;
-  ts: string;
-  react: string;
-  next: string;
-  redux: string;
-  sass: string;
-  tailwind: string;
-  css: string;
-  html: string;
-  jest: string;
-  gitHub: string;
-  firebase: string;
-}
 
 export const translateList = function (
   key: string | undefined,
@@ -38,10 +24,10 @@ function TechStackList(props: TechStackListProps) {
   const { animation, techStack, small, setTechDescText = () => {} } = props;
 
   return (
-    <ul className={classes.list}>
+    <ul className={`${small ? classes.listSmall : classes.list}`}>
       {techStack.map((item, index) => {
-        const { icon, name, desc } = item;
-        const translatedDesc = translateList(desc, techStackListDescLanguage);
+        const { icon, name } = item;
+        const translatedDesc = translateList(name, techStackListDescLanguage);
         const delay = animation ? index * 100 : 0;
         return (
           <TechStackTile

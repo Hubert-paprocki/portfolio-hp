@@ -16,127 +16,134 @@ import {
 export interface TechStack {
   icon: React.ComponentType;
   name: string;
-  desc?:string
 }
 
 export interface Project {
   id:string
   img: string;
   title: string;
-  descShort: string;
-  descLong: string;
   techstack: TechStack[];
   link: string;
+  outLink: string;
 }
 
 export const projectsArr: Project[] = [
   {
     id:"simpleWeather",
-    img: "simpleWeather.png",
+    img: "simpleWeather1.png",
     title: "Simple Weather",
-    descShort:
-      "descShort",
-    descLong:
-      "descLong",
     techstack: [
       { icon: SiReact, name: "React" },
-      { icon: SiTypescript, name: "Typescript" },
+      { icon: SiTypescript, name: "TypeScript" },
       { icon: SiTailwindcss, name: "Tailwind" },
       { icon: SiJest, name: "Jest" },
     ],
     link: "simple-weather",
+    outLink:"https://simple-weather-hp.web.app/"
   },
   {
     id:"toDo",
-    img: "todo.png",
+    img: "todo1.png",
     title: "What's the plan?",
-    descShort:
-      "descShort",
-    descLong:
-      "descLong",
     techstack: [
-      { icon: SiJavascript, name: "Javascript" },
+      { icon: SiJavascript, name: "JavaScript" },
       { icon: SiReact, name: "React" },
-      { icon: SiTypescript, name: "Typescript" },
+      { icon: SiTypescript, name: "TypeScript" },
       { icon: SiTailwindcss, name: "Tailwind" },      {icon:SiFirebase,name:"Firebase"}
     ],
     link: "whats-the-plan",
+    outLink:"https://whatstheplan-hp.web.app/"
   },
   {
     id:"ambient",
-    img: "ambient.png",
+    img: "ambient1.png",
     title: "Ambient",
-    descShort:
-      "descShort",
-    descLong: "descLong",
     techstack: [
       { icon: SiRedux, name: "Redux" },
       { icon: SiReact, name: "React" },
-      { icon: SiTypescript, name: "Typescript" },
+      { icon: SiTypescript, name: "TypeScript" },
       { icon: SiSass, name: "SCSS" },
     ],
     link: "ambient",
+    outLink:""
   },
   {
     id:"cookieClicker",
-    img: "cookieClicker.png",
+    img: "cookieClicker1.png",
     title: "Cookie Clicker",
-    descShort:
-      "descShort",
-    descLong:
-      "descLong",
     techstack: [
       { icon: SiRedux, name: "Redux" },
       { icon: SiReact, name: "React" },
-      { icon: SiTypescript, name: "Typescript" },
+      { icon: SiTypescript, name: "TypeScript" },
       { icon: SiTailwindcss, name: "Tailwind" },
       { icon: SiJest, name: "Jest" },
       {icon:SiFirebase,name:"Firebase"}
     ],
     link: "cookie-clicker",
+    outLink:"https://cookieclicker-hp.web.app/"
+  },
+  {
+    id:"pswrdgn",
+    img: "pswrdgn1.png",
+    title: "P4$5W0rD!",
+    techstack: [
+      { icon: SiReact, name: "React" },
+      { icon: SiTypescript, name: "TypeScript" },
+      { icon: SiTailwindcss, name: "Tailwind" },
+    ],
+    link: "pswrdgn",
+    outLink:""
   },
 ];
 
 
 export const techStackList: TechStack[] = [
-  { icon: SiJavascript, name: "JavaScript", desc: "js" },
-  { icon: SiTypescript, name: "TypeScript", desc: "ts" },
-  { icon: SiReact, name: "React", desc: "react" },
-  { icon: SiNextdotjs, name: "Next.js", desc: "next" },
+  {
+    icon: SiJavascript,
+    name: "JavaScript"
+  },
+  {
+    icon: SiTypescript,
+    name: "TypeScript"
+  },
+  {
+    icon: SiReact,
+    name: "React"
+  },
+  {
+    icon: SiNextdotjs,
+    name: "Next.js"
+  },
   {
     icon: SiRedux,
     name: "Redux",
-    desc: "redux",
   },
-  { icon: SiSass, name: "Sass", desc: "sass" },
+  {
+    icon: SiSass,
+    name: "Sass",
+  },
   {
     icon: SiTailwindcss,
     name: "Tailwind",
-    desc: "tailwind",
   },
   {
     icon: SiCss3,
     name: "CSS3",
-    desc: "css",
   },
   {
     icon: SiHtml5,
     name: "HTML5",
-    desc: "html",
   },
   {
     icon: SiJest,
     name: "Jest",
-    desc: "jest",
   },
   {
     icon: SiGithub,
     name: "GitHub",
-    desc: "github",
   },
   {
     icon: SiFirebase,
     name: "Firebase",
-    desc: "firebase",
   },
 ];

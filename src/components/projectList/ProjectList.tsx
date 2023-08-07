@@ -11,7 +11,7 @@ function ProjectList() {
   return (
     <ul className={classes.list}>
       {projectsArr.map((item) => {
-        const { id, img, link, techstack, title } = item;
+        const { id, img, link, techstack, title, outLink } = item;
         const translatedProject = translateList(id, translatedProjectList);
 
         return (
@@ -24,6 +24,7 @@ function ProjectList() {
             techstack={techstack}
             link={link}
             key={id}
+            outLink={outLink}
           />
         );
       })}
