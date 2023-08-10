@@ -39,6 +39,8 @@
     opacity: 1;
   }
   .heading {
+    @include text($violetText, black, $textShadow);
+
     font-size: 4.5rem;
     @media (max-width: 1600px) {
       font-size: 3.5rem;
@@ -55,16 +57,16 @@
     @media (max-width: 768px) {
       font-size: 1.5rem;
     }
-    @include text($lightText, $violet, $textShadow);
+
     &Span {
-      text-shadow: 3px 3px 1.5px $lightText;
+      text-shadow: 3px 3px 1.5px black;
       position: relative;
       color: transparent;
       white-space: nowrap;
       &After {
         text-shadow: none;
         position: absolute;
-        background: linear-gradient(to top right, $violet 36%, #cf194f 76%);
+        background: linear-gradient(to top right, $orange 16%, #cf194f 76%);
         user-select: none;
         -webkit-background-clip: text;
         background-clip: text;

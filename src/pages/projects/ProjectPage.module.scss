@@ -60,7 +60,7 @@
       }
     }
     h1 {
-      @include text($lightText, $violet, $textShadow);
+      @include text($violetText, black, $textShadow);
       font-size: 1.8rem;
       flex-grow: 1;
       padding: 1rem 0 1rem 0;
@@ -84,7 +84,7 @@
       }
       @media (min-width: 1400px) {
         font-size: 1.6rem;
-        @include text($lightText, $violet, $textShadowSmall);
+        @include text($lightText, _, _);
       }
     }
     a {

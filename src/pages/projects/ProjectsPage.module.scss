@@ -21,6 +21,6 @@
       margin-top: 5rem;
     }
 
-    @include text($lightText, $violet, $textShadow);
+    @include text($violetText, black, $textShadow);
   }
 }

@@ -76,7 +76,7 @@
       }
     }
     .text {
-      @include text($lightText, $violet, $textShadowSmall);
+      @include text($violetText, black, $textShadowSmall);
       &Small {
         color: $lightText;
         @media (min-width: 1016px) {
