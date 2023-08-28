@@ -1,0 +1,113 @@
+@import "../../styles/config";
+@import "../../styles/mixins";
+
+.emailForm {
+  @include border(2px, $lightText, $roundedMd);
+  padding: 2rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .legend {
+    padding: 0 1rem;
+  }
+
+  .fieldsWrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 50%;
+
+      .label {
+        display: block;
+        height: 10%;
+      }
+
+      .field {
+        @include border(2px, $mediumText, $roundedMd);
+        padding: 0.4rem 1.25rem;
+        background: none;
+        outline: none;
+        height: 80%;
+        width: 100%;
+        max-width: 100%;
+        resize: none;
+      }
+    }
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 50%;
+      gap: 2rem;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      .fieldGroup {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &:focus-within {
+          .label {
+            transform: translate(-0.5rem, -61%);
+            background-color: $backgroundLight;
+            height: 50%;
+            font-size: 1rem;
+          }
+        }
+        .label {
+          position: absolute;
+          left: 1.25rem;
+          margin: 2px;
+          top: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          pointer-events: none;
+          transition: 0.2s;
+          padding: 0 0.5rem;
+          font-size: 0.9rem;
+        }
+        .field {
+          @include border(2px, $mediumText, $roundedMd);
+          padding: 0.4rem 1.25rem;
+          background: none;
+          outline: none;
+          flex: 3;
+          &::placeholder {
+            opacity: 0;
+          }
+        }
+        .field:not(:placeholder-shown) + .label {
+          transform: translate(-0.5rem, -61%);
+          background-color: $backgroundLight;
+          height: 50%;
+          font-size: 1rem;
+        }
+
+        .error {
+          color: $errorRed;
+          font-weight: 500;
+          position: absolute;
+          right: 0;
+          padding-right: 1.25rem;
+          padding-left: 10%;
+          text-align: left;
+          border-radius: $roundedMd;
+          margin: 2px;
+          top: 0;
+          bottom: 0;
+          display: flex;
+          background: linear-gradient(to right, transparent, $backgroundLight 20%);
+          align-items: center;
+        }
+      }
+    }
+  }
+}

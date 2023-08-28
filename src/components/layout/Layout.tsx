@@ -1,5 +1,5 @@
 import React from "react";
-import MainHeader from "./MainHeader";
+import Header from "./Header";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ interface LayoutProps {
 function Layout(props: LayoutProps) {
   return (
     <>
-      <MainHeader />
+      <Header />
       <>{props.children}</>
     </>
   );

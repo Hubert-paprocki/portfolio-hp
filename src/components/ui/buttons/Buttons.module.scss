@@ -10,8 +10,31 @@
   cursor: pointer;
   height: 50px;
   width: 50px;
+  position: relative;
 
   &:active {
     transform: rotate(360deg);
+  }
+}
+
+.formBtn {
+  transition: 0.2s;
+  background-color: transparent;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: $violetText;
+  outline: none;
+  @include border(2px, $violetText, $roundedMd);
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  align-self: baseline;
+  &:hover {
+    transform: translateY(-2px);
+    color: lighten($color: $violetText, $amount: 30%);
+    background-color: darken($color: rgba($violetText, 0.5), $amount: 50%);
+  }
+  &:active {
+    transform: translateY(1px);
+    transition: 0.08s;
   }
 }

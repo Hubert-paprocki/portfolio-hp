@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Link from "next/link";
-import classes from "./MainHeader.module.scss";
+import classes from "./Header.module.scss";
 import LanguageSwitch from "../languageButton/LanguageButton";
 import LanguageContext from "@/context/LangContext";
 interface HeaderLinks {
@@ -8,7 +8,7 @@ interface HeaderLinks {
   name: string;
 }
 
-function MainHeader() {
+function Header() {
   const { selectedLanguage } = useContext(LanguageContext);
 
   const headerLinks: HeaderLinks[] = [
@@ -44,4 +44,4 @@ function MainHeader() {
   );
 }
 
-export default MainHeader;
+export default Header;

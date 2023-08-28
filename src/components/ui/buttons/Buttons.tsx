@@ -6,12 +6,14 @@ interface ButtonProps {
   readonly onClick?: () => void;
   readonly type?: "button" | "submit" | "reset" | undefined;
   readonly lang?: boolean;
+  readonly formBtn?: boolean;
 }
 
 function Button(props: ButtonProps) {
-  const { children, onClick, type, lang } = props;
+  const { children, onClick, type, lang, formBtn } = props;
   let buttonClass;
   if (lang) buttonClass = classes.lang;
+  else if (formBtn) buttonClass = classes.formBtn;
 
   return (
     <button

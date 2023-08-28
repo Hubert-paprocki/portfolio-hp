@@ -11,26 +11,21 @@ function LanguageButton() {
   const { language, handleLanguageSwitch } = useContext(LanguageContext);
   console.log(language, `lng`);
   return (
-    <Button type="button" lang onClick={handleLanguageSwitch}>
-      {language === "pl" ? (
-        <Image
-          src={usaFlag}
-          alt="usa flag"
-          className={classes.img}
-          width={50}
-          height={50}
-        />
-      ) : language === "en" ? (
-        <Image
-          src={polandFlag}
-          alt="polish flag"
-          aria-label="polish language"
-          className={classes.img}
-          width={50}
-          height={50}
-        />
-      ) : null}
-    </Button>
+    <div className={classes.buttonContainer}>
+      <Button type="button" lang onClick={handleLanguageSwitch}>
+        {language === "pl" ? (
+          <Image src={usaFlag} alt="usa flag" className={classes.img} fill />
+        ) : language === "en" ? (
+          <Image
+            src={polandFlag}
+            alt="polish flag"
+            aria-label="polish language"
+            className={classes.img}
+            fill
+          />
+        ) : null}
+      </Button>
+    </div>
   );
 }
 

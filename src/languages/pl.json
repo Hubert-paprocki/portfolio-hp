@@ -44,6 +44,10 @@
   "aboutMePage": {
     "desc": "Jestem ambitnym Junior Frontend web developerem z zamiłowaniem do nauki i rozwijania swoich umiejętności w branży IT. Swoją wiedzę zdobywam poprzez kursy online, takie jak Udemy lub po prostu naukę samemu podczas robienia projektów. Jestem gotowy na wyzwania, które stawia przede mną praca w dziale front-endu. Moją motywacją do pracy jest możliwość realizacji ciekawych projektów oraz ciągłe podnoszenie swoich umiejętności. Poszukuję pracy w firmie, która oferuje rozwój i ma podobne wartości, co ja."
     }
-
+  },
+  "contactPage":{
+    "pageTitle":"Nawiąż ze mną kontakt",
+    "title":"Skontaktuj się ze mną i opowiedz o projekcie.",
+    "contactForms":"Inne formy kontaktu"
   }
 }  

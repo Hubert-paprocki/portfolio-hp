@@ -1,0 +1,47 @@
+@import "../../styles/config";
+@import "../../styles/mixins";
+
+.list {
+  margin: 5rem 0 0 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+
+  .tile {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    position: relative;
+    background-color: $backgroundLighter;
+    border-radius: 10000px;
+    padding: 0.75rem;
+    font-size: 1.75rem;
+    transition: 0.2s;
+    overflow: hidden;
+    align-items: center;
+    width: 3.25rem;
+    height: 3.25rem;
+
+    .text {
+      font-size: 1.25rem;
+      position: absolute;
+      opacity: 0;
+      left: 100%;
+      right: 0;
+      white-space: nowrap;
+      color: $lightText;
+    }
+
+    &:hover {
+      width: 100%;
+      color: $violetText;
+      .text {
+        position: relative;
+        left: auto;
+        right: auto;
+        opacity: 1;
+      }
+    }
+  }
+}

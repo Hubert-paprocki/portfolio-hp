@@ -26,7 +26,7 @@ function ProjectTile(props: ProjectTileProps): JSX.Element {
           <figcaption className={classes.textWrapper}>
             <h2>{title}</h2>
             <p>
-              {descShort}
+              {descShort}{" "}
               <Link href={`projects/${link}`}> {projectTileLanguage}</Link>
             </p>
           </figcaption>

@@ -45,5 +45,10 @@
 },
 "aboutMePage":{
   "desc":"I am an ambitious Junior Frontend web developer with a passion for learning and improving my skills in the IT industry. I acquire my knowledge through online courses, such as Udemy, or by solving tasks on Code Wars. I am ready for the challenges that working in the front-end department brings. My motivation for work comes from the opportunity to work on interesting projects and continuously enhance my skills. I am looking for a job in a company that offers growth and shares similar values to mine."
+},
+"contactPage":{
+  "pageTitle":"Nawiąż ze mną kontakt",
+  "title":"Skontaktuj się ze mną i opowiedz o projekcie.",
+  "contactForms":"Inne formy kontaktu"
 }
 }

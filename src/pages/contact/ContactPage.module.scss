@@ -1,0 +1,33 @@
+@import "../../styles/config";
+@import "../../styles/mixins";
+
+.main {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $backgroundLight;
+  height: 100%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    .left {
+      width: 40%;
+
+      .title {
+        @include text($violetText, black, $textShadow);
+        font-size: 2.25rem;
+        padding: 4rem;
+      }
+    }
+
+    .right {
+      width: 60%;
+    }
+
+    @media (min-width: 800px) {
+      flex-direction: row;
+    }
+  }
+}

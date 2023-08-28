@@ -54,6 +54,7 @@ function HomePage() {
             animation={isAnimated}
             techStack={techStackList}
             setTechDescText={setTechDescText}
+            small
           />
           {techDescText && (
             <p className={classes.techStackDesc}>{techDescText}</p>

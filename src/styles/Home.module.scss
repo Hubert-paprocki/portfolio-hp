@@ -28,7 +28,17 @@
   }
 
   .left {
-    padding: 5rem 5rem 5rem 5rem;
+    padding: 5rem;
+    @media (max-width: 1100px) {
+      padding: 4rem;
+    }
+    @media (max-width: 900px) {
+      padding: 3rem;
+    }
+    @media (max-width: 700px) {
+      padding: 2rem;
+    }
+
     transition: 1s;
     transform: translateX(125%);
     opacity: 0;
@@ -66,7 +76,7 @@
       &After {
         text-shadow: none;
         position: absolute;
-        background: linear-gradient(to top right, $orange 16%, #cf194f 76%);
+        background: linear-gradient(to top right, #9500ff 30%, #008cff 75%);
         user-select: none;
         -webkit-background-clip: text;
         background-clip: text;
