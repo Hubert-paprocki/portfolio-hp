@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import Button from "../ui/buttons/Buttons";
 import classes from "./EmailForm.module.scss";
+import { firestore } from "@/components/firebase";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 interface FormValues {
   shortProjectDescription: string;
@@ -11,8 +13,34 @@ interface FormValues {
 }
 
 function EmailForm() {
-  const handleSubmit = (values: FormValues) => {
-    console.log(values);
+  const [isSend, setIsSend] = useState<boolean>(false);
+  const [isError, setIsError] = useState<boolean>(false);
+
+  const showMsg = (condition: string) => {
+    if (condition === `sent`) {
+      setIsSend(true);
+
+      setTimeout(() => {
+        setIsSend(false);
+      }, 3000);
+    }
+
+    if (condition === `error`) {
+      setIsError(true);
+
+      setTimeout(() => {
+        setIsError(false);
+      }, 3000);
+    }
+  };
+
+  const handleSubmit = async (values: FormValues) => {
+    try {
+      await addDoc(collection(firestore, "submissions"), values);
+      showMsg(`sent`);
+    } catch (error) {
+      showMsg(`error`);
+    }
   };
 
   const validate = (values: FormValues) => {
@@ -133,9 +161,26 @@ function EmailForm() {
             </div>
           </div>
 
-          <Button type="submit" formBtn>
-            Send
-          </Button>
+          <div className={classes.submitWrapper}>
+            <Button type="submit" formBtn>
+              Send
+            </Button>
+            {isError && (
+              <p
+                className={`${classes.errorMsg} ${
+                  isError && classes.animationMsg
+                }`}
+              >
+                Error sending form
+              </p>
+            )}
+
+            <p
+              className={`${classes.sentMsg} ${isSend && classes.animationMsg}`}
+            >
+              Form sent successfully
+            </p>
+          </div>
         </fieldset>
       </Form>
     </Formik>

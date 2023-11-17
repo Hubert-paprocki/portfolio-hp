@@ -18,7 +18,9 @@ function ContactPage() {
         <article className={classes.container}>
           <section className={classes.left}>
             <h1 className={classes.title}>{contactPageLang.title}</h1>
-            <h2>{contactPageLang.contactForms}</h2>
+            <h2 className={classes.titleSecondary}>
+              {contactPageLang.contactForms}
+            </h2>
             <ul>{<ContactFormsList />}</ul>
           </section>
           <section className={classes.right}>
